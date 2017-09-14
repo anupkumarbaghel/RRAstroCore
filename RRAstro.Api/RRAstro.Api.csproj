@@ -16,4 +16,10 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RRAstro.Application\RRAstro.Application.csproj" />
+    <ProjectReference Include="..\RRAstro.Core\RRAstro.Core.csproj" />
+    <ProjectReference Include="..\RRAstro.Repository\RRAstro.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RRAstro.Core\RRAstro.Core.csproj" />
+    <ProjectReference Include="..\RRAstro.Repository\RRAstro.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
