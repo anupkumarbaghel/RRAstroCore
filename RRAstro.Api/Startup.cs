@@ -25,7 +25,10 @@ namespace RRAstro.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddCors();
+            services.RegisterDependencies();
             services.AddDbContext<Repository.RRAstroDBContext>(opts => opts.UseSqlServer(Configuration.GetConnectionString("RRAstroConnection")));
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +38,8 @@ namespace RRAstro.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(builder =>
+      builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseMvc();
         }
