@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RRAstro.Core.Domain.QuestionAns;
+using RRAstro.Core.Domain.KundaliReq;
+using RRAstro.Core.Domain.GetColorStone;
 
 namespace RRAstro.Repository
 {
@@ -13,13 +15,19 @@ namespace RRAstro.Repository
         public DbSet<Question> Questions { get; set; }
         public DbSet<QuestionTopic> QuestionTopics { get; set; }
        
-        
+        public DbSet<KundaliRequest> KundaliReqs { get; set; }
+        public DbSet<ColorStoneReq> ColorStoneReqs { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<QuestionTopic>().ToTable("Replys", schema: "dbo");
             modelBuilder.Entity<QuestionTopic>().ToTable("Questions", schema: "dbo");
             modelBuilder.Entity<QuestionTopic>().ToTable("QuestionTopics", schema: "dbo");
+            //For Kundali Request
+            modelBuilder.Entity<KundaliRequest>().ToTable("KundaliReqs", schema: "dbo");
+            //For Color Stone Request
+            modelBuilder.Entity<ColorStoneReq>().ToTable("ColorStoneReqs", schema: "dbo");
         }
 
     }

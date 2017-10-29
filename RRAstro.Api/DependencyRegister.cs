@@ -14,7 +14,14 @@ namespace RRAstro.Api
                 , RRAstro.Repository.QuestionAns.QuestionTopicRepository>();
             services.AddScoped<RRAstro.Core.Interface.Application.QuestionAns.IQuestionTopicApplication
                 , RRAstro.Application.QuestionAns.QuestionTopicApplication>();
-
+            services.AddScoped<RRAstro.Core.Interface.Repository.KundaliReq.IKundaliReqRepository
+               , RRAstro.Repository.KundaliReq.KundaliReqRepository>();
+            services.AddScoped<RRAstro.Core.Interface.Application.KundaliReq.IKundaliReqApplication
+                , RRAstro.Application.KundaliReq.KundaliReqApplication>();
+            services.AddScoped<RRAstro.Core.Interface.Repository.GetColorStone.IColorStoneReqRepository
+               , RRAstro.Repository.GetColorStone.ColorStoneReqRepository>();
+            services.AddScoped<RRAstro.Core.Interface.Application.GetColorStone.IColorStoneReqApplication
+                , RRAstro.Application.GetColorStone.ColorStoneReqApplication>();
             return services;
         }
 
