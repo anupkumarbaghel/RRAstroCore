@@ -22,6 +22,10 @@ namespace RRAstro.Api
                , RRAstro.Repository.GetColorStone.ColorStoneReqRepository>();
             services.AddScoped<RRAstro.Core.Interface.Application.GetColorStone.IColorStoneReqApplication
                 , RRAstro.Application.GetColorStone.ColorStoneReqApplication>();
+            services.AddScoped<RRAstro.Core.Interface.Repository.BookApp.IBookAppointmentRepository
+               , RRAstro.Repository.BookApp.BookAppointmentRepository>();
+            services.AddScoped<RRAstro.Core.Interface.Application.BookApp.IBookAppointmentApplication
+                , RRAstro.Application.BookApp.BookAppointmentApplication>();
             return services;
         }
 

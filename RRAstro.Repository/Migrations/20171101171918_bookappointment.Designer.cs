@@ -11,9 +11,10 @@ using System;
 namespace RRAstro.Repository.Migrations
 {
     [DbContext(typeof(RRAstroDBContext))]
-    partial class RRAstroDBContextModelSnapshot : ModelSnapshot
+    [Migration("20171101171918_bookappointment")]
+    partial class bookappointment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
